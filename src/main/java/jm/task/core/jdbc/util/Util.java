@@ -10,11 +10,11 @@ public class Util {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "testuser";
 
-    public static Connection getConnection()  {
+    public static Connection getConnection() {
         Connection conn = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String connectionURL =  "jdbc:mysql://" + HOST_NAME + ":3306/" + DATABASE;
+            String connectionURL = "jdbc:mysql://" + HOST_NAME + ":3306/" + DATABASE;
             conn = DriverManager.getConnection(connectionURL, USERNAME, PASSWORD);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
